@@ -26,52 +26,21 @@ this.build_jin_camp_action <- this.inherit("scripts/factions/faction_action", {
 		this.m.Score = 2;
 	}
 
-	function onClear()
-	{
-	}
-
 	function onExecute( _faction )
 	{
 		local camp;
-		local r = this.Math.rand(1, 2);
-		local disallowedTerrain = [];
+		local disallowedTerrain = [this.Const.World.TerrainType.Mountains, this.Const.World.TerrainType.Impassable, this.Const.World.TerrainType.Ocean]
+		local tile = this.getTileToSpawnLocation(this.Const.Factions.BuildCampTries, disallowedTerrain, 13, 35, 1000, 7, 7, null, 0.0, 1.0);
 
-		for( local i = 0; i < this.Const.World.TerrainType.COUNT; i = ++i )
+		if (tile != null)
 		{
-			if (i == this.Const.World.TerrainType.Desert || i == this.Const.World.TerrainType.Oasis || i == this.Const.World.TerrainType.Steppe || i == this.Const.World.TerrainType.Hills)
-			{
-			}
-			else
-			{
-				disallowedTerrain.push(i);
-			}
-		}
-
-		if (r == 1)
-		{
-			local tile = this.getTileToSpawnLocation(this.Const.Factions.BuildCampTries, disallowedTerrain, 13, 35, 1000, 7, 7, null, 0.0, 0.2);
-
-			if (tile != null)
-			{
-				camp = this.World.spawnLocation("scripts/entity/world/locations/nomad_jin_city_location", tile.Coords);
-			}
-		}
-		
-		else if (r == 2)
-		{
-			local tile = this.getTileToSpawnLocation(this.Const.Factions.BuildCampTries, disallowedTerrain, 14, 37, 1000, 7, 7, null, 0.0, 0.2);
-
-			if (tile != null)
-			{
-				camp = this.World.spawnLocation("scripts/entity/world/locations/nomad_jin_city_location", tile.Coords);
-			}
+			camp = this.World.spawnLocation("scripts/entity/world/locations/nomad_jin_city_location", tile.Coords);
 		}
 
 		if (camp != null)
 		{
-			local banner = this.getAppropriateBanner(camp, _faction.getSettlements(), 10, this.Const.NomadBanners);
 			camp.onSpawned();
-			camp.setBanner(banner);
+			camp.setBanner("banner_jin");
 			_faction.addSettlement(camp, false);
 		}
 	}

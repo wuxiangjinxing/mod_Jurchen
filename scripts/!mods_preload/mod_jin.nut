@@ -7,9 +7,7 @@ gt.Const.FactionTrait.Actions[19].push("scripts/factions/actions/build_jin_camp_
 {	
 	//flags used:
 	//spawnedJin : Set when jin has been spawned, so that only one can be spawned
-	//disabledUntil: set when a town has been converted and non permanent destruction, randoms a date in days when it's going to rebuild based on size
-	local withDeadline = true;
-	::mods_hookNewObject("states/world/asset_manager", function (o)
+	::mods_hookNewObjectOnce("states/world/asset_manager", function (o)
 	{
 		while (!("update" in o)) o = o[o.SuperName];
 		local update = o.update;		
@@ -20,18 +18,14 @@ gt.Const.FactionTrait.Actions[19].push("scripts/factions/actions/build_jin_camp_
 			{
 				//spawns the jin
 				local disallowedTerrain = [this.Const.World.TerrainType.Mountains, this.Const.World.TerrainType.Impassable, this.Const.World.TerrainType.Ocean]
-				local f = this.World.FactionManager.getFactionOfType(this.Const.FactionType.OrientalBandits)
+				local f = this.World.FactionManager.getFactionOfType(this.Const.FactionType.Jin)
 				local tile;
 				local camp;
 				while (tile == null)
 				{
 					tile = f.m.Deck[0].getTileToSpawnLocation(this.Const.Factions.BuildCampTries * 100, disallowedTerrain, 30, 1000);
 				}
-				if (tile != null)
-				{
-					camp = this.World.spawnLocation("scripts/entity/world/locations/nomad_jin_city2_location.nut", tile.Coords);
-				}
-
+				camp = this.World.spawnLocation("scripts/entity/world/locations/nomad_jin_city2_location.nut", tile.Coords);
 				if (camp != null)
 				{
 					this.logInfo("Jin!")
@@ -39,15 +33,9 @@ gt.Const.FactionTrait.Actions[19].push("scripts/factions/actions/build_jin_camp_
 					camp.setBanner("banner_jin")
 					camp.onSpawned();
 					f.addSettlement(camp, false);
-					this.World.Flags.set("spawnedJin", true)
-					// start instantly for testing	
-					
-
-					
+					this.World.Flags.set("spawnedJin", true)				
 				}
             }
 		}	
-	}	
-   )
-  }
- )
+	});
+});
