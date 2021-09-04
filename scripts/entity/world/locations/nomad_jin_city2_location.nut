@@ -24,26 +24,7 @@ this.nomad_jin_city2_location <- this.inherit("scripts/entity/world/location", {
 	function onSpawned()
 	{
 		this.location.onSpawned();
-		local ambalinggU = {
-		ID = this.Const.EntityType.NomadHalberdMaster,
-		Variant = 5,
-		Strength = 30,
-		Cost = 40,
-		Row = 1,
-		Script = "scripts/entity/tactical/humans/nomad_halberdmaster",
-		NameList = ["AmbalinggU"],
-		TitleList = null
-		}
-		local gao = {
-		ID = this.Const.EntityType.NomadSpearMaster,
-		Variant = 5,
-		Strength = 20,
-		Cost = 40,
-		Row = 1,
-		Script = "scripts/entity/tactical/humans/nomad_spearmaster",
-		NameList = ["Gao"],
-		TitleList = null
-		}
+
 		local Troops = 
 		[		
 			{
@@ -63,12 +44,12 @@ this.nomad_jin_city2_location <- this.inherit("scripts/entity/world/location", {
 				
 			{
 			Type = this.Const.World.Spawn.Troops.NomadHalberdMaster,
-			Num = 3
+			Num = 4
 			}
 			
 			{
 			Type = this.Const.World.Spawn.Troops.NomadSpearMaster,
-			Num = 3
+			Num = 4
 			}
 			
 			{
@@ -84,9 +65,6 @@ this.nomad_jin_city2_location <- this.inherit("scripts/entity/world/location", {
 				this.Const.World.Common.addTroop(this, {Type = troop.Type}, false);
 			}
 		}
-
-		this.Const.World.Common.addTroop(this, {Type = ambalinggU}, false, 100);
-		this.Const.World.Common.addTroop(this, {Type = gao}, false, 100);
 	}
 
 	function onDropLootForPlayer( _lootTable )

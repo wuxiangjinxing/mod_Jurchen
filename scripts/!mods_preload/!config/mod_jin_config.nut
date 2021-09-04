@@ -31,9 +31,6 @@ gt.Const.Strings.jinNames <- [
 	"Deji"
 ];
 
-gt.Const.Strings.NomadHalberdMasterNames <- ["Akdun", "Gao", "AmbalinggU", "Pei" , "Colhorokongge", "Fiyangtahun", "Gabsihiyan", "Giyahun", "Jurgangga", "TondoGiljan", "YebkenHaha" ]
-gt.Const.Strings.NomadHalberdMasterTitles <- ["Ten Thousand People Against", "The Mighty", "The lion", "The Awful", "The legendary Generals", "The border Officer", "Battle-Scarred"]
-
 gt.Const.FactionType.Jurchen <- gt.Const.FactionType.len() - 2;
 gt.Const.FactionType.COUNT = gt.Const.FactionType.len();
 
@@ -218,6 +215,9 @@ gt.Const.World.Spawn.Troops.NomadFireBlunderbuss <-
 		Script = "scripts/entity/tactical/humans/nomad_fireblunderbuss",
 		TitleList = null
 	}
+
+gt.Const.Strings.NomadHalberdMasterNames <- ["Akdun", "Gao", "AmbalinggU", "Pei" , "Colhorokongge", "Fiyangtahun", "Gabsihiyan", "Giyahun", "Jurgangga", "TondoGiljan", "YebkenHaha" ]
+gt.Const.Strings.NomadHalberdMasterTitles <- ["Ten Thousand People Against", "The Mighty", "The lion", "The Awful", "The legendary Generals", "The border Officer", "Battle-Scarred"]
 	
 gt.Const.World.Spawn.Troops.NomadHalberdMaster <-
 	{
@@ -252,6 +252,9 @@ gt.Const.World.Spawn.Troops.NomadIronPagoda <-
 		Script = "scripts/entity/tactical/humans/nomad_ironpagoda",
 		TitleList = null
 	}
+
+gt.Const.Strings.NomadSpearMasterNames <- ["Deji", "Botebu", "Dezhibumbi", "Isibu" , "Welimbi", "Isibumbi", "Alibu", "Hurubu" ]
+gt.Const.Strings.NomadSpearMasterTitles <- ["the Legendary", "the Quick", "the Clever", "Swift Eagle", "the Best of Spear master", "Excellent in martial arts", "the Precision strike"]
 	
 gt.Const.World.Spawn.Troops.NomadSpearMaster <-
 	{
@@ -264,6 +267,9 @@ gt.Const.World.Spawn.Troops.NomadSpearMaster <-
 		NameList = this.Const.Strings.NomadSpearMasterNames,
 		TitleList = this.Const.Strings.NomadSpearMasterTitles
 	}
+
+gt.Const.Strings.NomadCenturionNames <- ["Wanggiya", "Abkai horgiku", "Bodohonggo", "FaSSangga" , "Fujurungga", "Gelmerjembi", "Giljan", "Kesingge" , "MuduriMorin ", "Mukdembi", "NiowargiGasha"  ]
+gt.Const.Strings.NomadCenturionTitles <- ["A pivot of the sky", "Resourceful", "Superior", "Prominent personage", "Spotless", "Blessed is the man", "Commander candidate"]
 	
 gt.Const.World.Spawn.Troops.NomadCenturion <-
 	{
