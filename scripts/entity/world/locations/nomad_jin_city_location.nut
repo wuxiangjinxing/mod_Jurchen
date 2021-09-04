@@ -16,55 +16,9 @@ this.nomad_jin_city_location <- this.inherit("scripts/entity/world/location", {
 		this.m.CombatLocation.CutDownTrees = false;
 		this.m.CombatLocation.AdditionalRadius = 5;
 		this.m.IsDespawningDefenders = false;
-		//this.setDefenderSpawnList(this.Const.World.Spawn.NomadJin);
+		this.setDefenderSpawnList(this.Const.World.Spawn.JurchenDefenders);
 		this.m.Resources = 300;
 		this.m.NamedShieldsList = this.Const.Items.NamedSouthernShields;
-	}
-
-	function onSpawned()
-	{
-		this.location.onSpawned();
-		
-		local Troops = 
-		[		
-			{
-			Type = this.Const.World.Spawn.Troops.NomadFireBlunderbuss,
-			Num = 5
-			}	
-			
-			{
-			Type = this.Const.World.Spawn.Troops.NomadIronPagoda,
-			Num = 8
-			}
-			
-			{
-			Type = this.Const.World.Spawn.Troops.NomadCenturion,
-			Num = 1
-			}
-				
-			{
-			Type = this.Const.World.Spawn.Troops.NomadHalberdMaster,
-			Num = 2
-			}
-			
-			{
-			Type = this.Const.World.Spawn.Troops.NomadSpearMaster,
-			Num = 2
-			}
-			
-			{
-			Type = this.Const.World.Spawn.Troops.NomadInfantry,
-			Num = 10
-			}			
-		]
-		
-		foreach(troop in Troops)
-		{
-			for( local i = 0; i < troop.Num; i = ++i )
-			{
-				this.Const.World.Common.addTroop(this, {Type = troop.Type}, false);
-			}
-		}		
 	}
 
 	function onDropLootForPlayer( _lootTable )

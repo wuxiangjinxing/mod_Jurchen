@@ -45,6 +45,9 @@ gt.Const.FactionAlliance.push([this.Const.Faction.Jurchen]);
 gt.Const.FactionTrait.Jurchen <- gt.Const.FactionTrait.len() - 1;
 gt.Const.FactionTrait.Actions.push([
 "scripts/factions/actions/build_jin_camp_action",
+"scripts/factions/actions/send_jin_ambushers_action",
+"scripts/factions/actions/send_jin_roamers_action",
+"scripts/factions/actions/defend_jin_action"
 ]);
 
 gt.Const.JurchenBanners <- [

@@ -29,12 +29,10 @@ this.nomad_fireblunderbuss <- this.inherit("scripts/entity/tactical/human", {
 		this.m.Hitpoints = b.Hitpoints;
 		this.m.CurrentProperties = clone b;
 		this.setAppearance();
-		this.getSprite("socket").setBrush("bust_base_southern");
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_bullseye"));		
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_anticipation"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_overwhelm"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_fearsome"));
-		this.m.Skills.add(this.new("scripts/skills/actives/rotation"));
-		this.m.Skills.add(this.new("scripts/skills/actives/recover_skill"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_quick_hands"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_battle_forged"))
 	}

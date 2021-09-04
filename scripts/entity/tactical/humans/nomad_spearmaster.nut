@@ -72,8 +72,6 @@ this.nomad_spearmaster <- this.inherit("scripts/entity/tactical/human", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_bullseye"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_quick_hands"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_relentless"));
-		this.m.Skills.add(this.new("scripts/skills/actives/rotation"));
-		this.m.Skills.add(this.new("scripts/skills/actives/recover_skill"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));
 		
 		if (!this.Tactical.State.isScenarioMode() && this.World.getTime().Days >= 90)

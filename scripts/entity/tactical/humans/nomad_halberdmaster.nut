@@ -57,7 +57,6 @@ this.nomad_halberdmaster <- this.inherit("scripts/entity/tactical/human", {
 		b.IsSpecializedInCleavers = true;
 		this.m.Skills.update();
 		this.setAppearance();
-		this.getSprite("socket").setBrush("bust_base_wildmen_01");
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_underdog"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_adrenalin"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_anticipation"));
@@ -66,7 +65,6 @@ this.nomad_halberdmaster <- this.inherit("scripts/entity/tactical/human", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_crippling_strikes"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_coup_de_grace"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_hold_out"));
-		this.m.Skills.add(this.new("scripts/skills/perks/perk_recover"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_brawny"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));
 		this.m.Skills.add(this.new("scripts/skills/actives/jinweapon99_02"));

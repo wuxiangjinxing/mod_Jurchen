@@ -12,7 +12,7 @@ this.nomad_centurion <- this.inherit("scripts/entity/tactical/human", {
 		this.m.Beards = this.Const.Beards.SouthernUntidy;
 		this.m.BeardChance = 50;
 		this.m.SoundPitch = 0.95;
-		this.m.AIAgent = this.new("scripts/ai/tactical/agents/halberdmaster_agent");
+		this.m.AIAgent = this.new("scripts/ai/tactical/agents/centurion_agent");
 		this.m.AIAgent.setActor(this);
 	}
 
@@ -57,7 +57,6 @@ this.nomad_centurion <- this.inherit("scripts/entity/tactical/human", {
 		b.IsSpecializedInCleavers = true;
 		this.m.Skills.update();
 		this.setAppearance();
-		this.getSprite("socket").setBrush("bust_base_wildmen_01");
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_underdog"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_adrenalin"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_anticipation"));
@@ -70,6 +69,7 @@ this.nomad_centurion <- this.inherit("scripts/entity/tactical/human", {
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_brawny"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_pathfinder"));
 		this.m.Skills.add(this.new("scripts/skills/perks/perk_killing_frenzy"));
+		this.m.Skills.add(this.new("scripts/skills/perks/perk_rally_the_troops"));
 	}
 
 	function onOtherActorFleeing( _actor )
