@@ -29,14 +29,24 @@ this.build_jin_camp_action <- this.inherit("scripts/factions/faction_action", {
 	function onExecute( _faction )
 	{
 		local camp;
+		local r = this.Math.rand(1, 2);
 		local disallowedTerrain = [this.Const.World.TerrainType.Mountains, this.Const.World.TerrainType.Impassable, this.Const.World.TerrainType.Ocean]
-		local tile = this.getTileToSpawnLocation(this.Const.Factions.BuildCampTries, disallowedTerrain, 13, 35, 1000, 7, 7, null, 0.0, 1.0);
-
-		if (tile != null)
+		if (r == 1)
 		{
-			camp = this.World.spawnLocation("scripts/entity/world/locations/nomad_jin_city_location", tile.Coords);
+			local tile = this.getTileToSpawnLocation(this.Const.Factions.BuildCampTries, disallowedTerrain, 13, 35, 1000, 7, 7, null, 0.0, 1.0);
+			if (tile != null)
+			{
+				camp = this.World.spawnLocation("scripts/entity/world/locations/nomad_jin_city_location", tile.Coords);
+			}
 		}
-
+		else
+		{
+			local tile = this.getTileToSpawnLocation(this.Const.Factions.BuildCampTries, disallowedTerrain, 14, 37, 1000, 7, 7, null, 0.0, 1.0);
+			if (tile != null)
+			{
+				camp = this.World.spawnLocation("scripts/entity/world/locations/nomad_jin_city2_location", tile.Coords);
+			}		
+		}
 		if (camp != null)
 		{
 			camp.onSpawned();
