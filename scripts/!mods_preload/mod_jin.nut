@@ -12,7 +12,7 @@
 				createFactions( _settings )
 				local jin_faction = this.new("scripts/factions/jin_faction")
 				jin_faction.setID(this.m.Factions.len());
-				jin_faction.setName("Samurai");
+				jin_faction.setName("Jurchen");
 				jin_faction.setDiscovered(true);
 				jin_faction.addTrait(this.Const.FactionTrait.Jurchen);
 				this.m.Factions.push(jin_faction);
@@ -25,7 +25,7 @@
 				createFactions()
 				local jin_faction = this.new("scripts/factions/jin_faction")
 				jin_faction.setID(this.m.Factions.len());
-				jin_faction.setName("Samurai");
+				jin_faction.setName("Jurchen");
 				jin_faction.setDiscovered(true);
 				jin_faction.addTrait(this.Const.FactionTrait.Jurchen);
 				this.m.Factions.push(jin_faction);

@@ -54,6 +54,8 @@ gt.Const.JurchenBanners <- [
 	"banner_jin"	
 ];
 
+gt.Const.Music.JinTracks <- ["music/jin.ogg"]
+
 gt.Const.Tactical.Actor.NomadFireBlunderbuss <- {
 	XP = 250,
 	ActionPoints = 9,

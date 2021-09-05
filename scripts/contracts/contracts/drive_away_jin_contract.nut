@@ -154,7 +154,7 @@ this.drive_away_jin_contract <- this.inherit("scripts/contracts/contract", {
 					else
 					{
 						local properties = this.World.State.getLocalCombatProperties(this.World.State.getPlayer().getPos());
-						properties.Music = this.Const.Music.OrientalBanditTracks;
+						properties.Music = this.Const.Music.JinTracks;
 						properties.Entities.push({
 							ID = this.Const.EntityType.NomadCenturion,
 							Variant = 200,
@@ -344,7 +344,7 @@ this.drive_away_jin_contract <- this.inherit("scripts/contracts/contract", {
 						this.World.Assets.addBusinessReputation(this.Const.World.Assets.ReputationOnContractSuccess);
 						local tile = this.World.State.getPlayer().getTile();
 						local p = this.Const.Tactical.CombatInfo.getClone();
-						p.Music = this.Const.Music.OrientalBanditTracks;
+						p.Music = this.Const.Music.JinTracks;
 						p.TerrainTemplate = this.Const.World.TerrainTacticalTemplate[tile.TacticalType];
 						p.Tile = tile;
 						p.CombatID = "BountyHunters";

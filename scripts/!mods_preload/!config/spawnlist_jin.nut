@@ -17,7 +17,7 @@ gt.Const.World.Spawn.JurchenRoamers <- [
         MovementSpeedMult = 1.0,
         VisibilityMult = 1.0,
         VisionMult = 1.0,
-        Body = "figure_nomad_03",
+        Body = "figure_tiefutu_01",
         Troops =
         [
             {
@@ -31,7 +31,7 @@ gt.Const.World.Spawn.JurchenRoamers <- [
         MovementSpeedMult = 1.0,
         VisibilityMult = 1.0,
         VisionMult = 1.0,
-        Body = "figure_nomad_03",
+        Body = "figure_tiefutu_01",
         Troops =
         [
             {
@@ -49,7 +49,7 @@ gt.Const.World.Spawn.JurchenRoamers <- [
         MovementSpeedMult = 1.0,
         VisibilityMult = 1.0,
         VisionMult = 1.0,
-        Body = "figure_nomad_03",
+        Body = "figure_tiefutu_01",
         Troops =
         [
             {
@@ -71,7 +71,7 @@ gt.Const.World.Spawn.JurchenRoamers <- [
         MovementSpeedMult = 1.0,
         VisibilityMult = 1.0,
         VisionMult = 1.0,
-        Body = "figure_nomad_03",
+        Body = "figure_tiefutu_01",
         Troops =
         [
             {
@@ -100,7 +100,7 @@ gt.Const.World.Spawn.JurchenRaiders <- [
         MovementSpeedMult = 1.0,
         VisibilityMult = 1.0,
         VisionMult = 1.0,
-        Body = "figure_nomad_03",
+        Body = "figure_tiefutu_01",
         Troops =
         [
             {
@@ -126,7 +126,7 @@ gt.Const.World.Spawn.JurchenRaiders <- [
         MovementSpeedMult = 1.0,
         VisibilityMult = 1.0,
         VisionMult = 1.0,
-        Body = "figure_nomad_03",
+        Body = "figure_tiefutu_01",
         Troops =
         [
             {
@@ -155,7 +155,7 @@ gt.Const.World.Spawn.JurchenDefenders <- [
         MovementSpeedMult = 1.0,
         VisibilityMult = 1.0,
         VisionMult = 1.0,
-        Body = "figure_nomad_01",
+        Body = "figure_changjidashi_01",
         Troops =
         [
 			{
@@ -189,7 +189,7 @@ gt.Const.World.Spawn.JurchenDefenders <- [
         MovementSpeedMult = 1.0,
         VisibilityMult = 1.0,
         VisionMult = 1.0,
-        Body = "figure_nomad_01",
+        Body = "figure_changmaodashi_01",
         Troops =
         [
 			{
@@ -223,7 +223,7 @@ gt.Const.World.Spawn.JurchenDefenders <- [
         MovementSpeedMult = 1.0,
         VisibilityMult = 1.0,
         VisionMult = 1.0,
-        Body = "figure_nomad_01",
+        Body = "figure_tietufu_01",
         Troops =
         [
 			{
