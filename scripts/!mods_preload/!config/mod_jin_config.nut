@@ -285,3 +285,6 @@ gt.Const.World.Spawn.Troops.NomadCenturion <-
 		NameList = this.Const.Strings.NomadCenturionNames,
 		TitleList = this.Const.Strings.NomadCenturionTitles
 	}
+	
+gt.Const.FactionTrait.Actions[this.Const.FactionTrait.Settlement].push("scripts/factions/actions/drive_away_jin_action");	
+gt.Const.FactionTrait.Actions[this.Const.FactionTrait.OrientalCityState].push("scripts/factions/actions/drive_away_jin_action");	
