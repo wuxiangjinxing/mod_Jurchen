@@ -40,6 +40,8 @@ gt.Const.Faction.COUNT = gt.Const.Faction.COUNT + 1;
 gt.Const.FactionColor.push(this.createColor("#b75a00"));
 gt.Const.FactionColor[gt.Const.Faction.Jurchen] = this.createColor("#ff9595");
 
+gt.Const.FactionBase.push("bust_base_jin");
+
 gt.Const.FactionAlliance.push([this.Const.Faction.Jurchen]);
 
 gt.Const.FactionTrait.Jurchen <- gt.Const.FactionTrait.len() - 1;
