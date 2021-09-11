@@ -44,7 +44,7 @@ gt.Const.FactionBase.push("bust_base_jin");
 
 gt.Const.FactionAlliance.push([this.Const.Faction.Jurchen]);
 
-gt.Const.FactionTrait.Jurchen <- gt.Const.FactionTrait.len() - 1;
+gt.Const.FactionTrait.Jurchen <- gt.Const.Faction.Jurchen;
 gt.Const.FactionTrait.Actions.push([
 "scripts/factions/actions/build_jin_camp_action",
 "scripts/factions/actions/send_jin_ambushers_action",
