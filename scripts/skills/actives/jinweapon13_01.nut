@@ -52,6 +52,19 @@ this.jinweapon13_01 <- this.inherit("scripts/skills/skill", {
 		this.m.ChanceSmash = 66;
 	}
 
+	function addResources()
+	{
+		foreach( r in this.m.SoundsA )
+		{
+			this.Tactical.addResource(r);
+		}
+
+		foreach( r in this.m.SoundsB )
+		{
+			this.Tactical.addResource(r);
+		}
+	}
+	
 	function getTooltip()
 	{
 		local ret = this.getDefaultTooltip();

@@ -50,6 +50,19 @@ this.jinweapon15_01 <- this.inherit("scripts/skills/skill", {
 		this.m.MaxRange = 2;
 	}
 
+	function addResources()
+	{
+		foreach( r in this.m.SoundsA )
+		{
+			this.Tactical.addResource(r);
+		}
+
+		foreach( r in this.m.SoundsB )
+		{
+			this.Tactical.addResource(r);
+		}
+	}
+	
 	function getTooltip()
 	{
 		local ret = this.getDefaultTooltip();
