@@ -1,5 +1,7 @@
 this.jinweapon04_01 <- this.inherit("scripts/skills/skill", {
-	m = {},
+	m = {
+		ApplyBonusToBodyPart = 0;
+	},
 	function create()
 	{
 		this.m.ID = "actives.jinweapon04_01";
