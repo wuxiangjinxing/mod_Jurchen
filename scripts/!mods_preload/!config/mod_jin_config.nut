@@ -31,11 +31,11 @@ gt.Const.Strings.jinNames <- [
 	"Deji"
 ];
 
-gt.Const.FactionType.Jurchen <- gt.Const.FactionType.COUNT;
-gt.Const.FactionType.COUNT = gt.Const.FactionType.COUNT + 1;
+gt.Const.FactionType.Jurchen <- gt.Const.FactionType.len() - 2;
+gt.Const.FactionType.COUNT = gt.Const.FactionType.len();
 
-gt.Const.Faction.Jurchen <- gt.Const.Faction.COUNT;
-gt.Const.Faction.COUNT = gt.Const.Faction.COUNT + 1;
+gt.Const.Faction.Jurchen <- gt.Const.Faction.len() - 2;
+gt.Const.Faction.COUNT = gt.Const.FactionType.len();
 
 gt.Const.FactionColor.push(this.createColor("#b75a00"));
 gt.Const.FactionColor[gt.Const.Faction.Jurchen] = this.createColor("#ff9595");
